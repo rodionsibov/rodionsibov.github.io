@@ -1,1 +1,3 @@
-Let's bring the designer’s concept to life through a mix of HTML, CSS and JavaScript 😉
+### The content for this page isn't ready yet. 🤷‍♂️
+You gotta make do with [home](https://github.com/rodionsibov) for now.
+
