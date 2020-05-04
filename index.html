@@ -13,127 +13,245 @@
     <title>Rodion Sibov 🧔 rodionsibov</title>
 
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      
+      :root {
+	  --color-bg: linear-gradient(33deg, #4d80e4 20%, #2e279d 60%) no-repeat;
+	  --color-link: #46b3e6;
+	  --color-text: #dff6f0;
+      }
 
+      ::selection {
+	  background: gold;
+	  color: black;
+
+      }
 
       * {
 	  margin: 0;
       }
       
       body {
+	  height: 100vh;
+	  background: var(--color-bg);
 	  width: 80%;
 	  margin: 0 auto;
-	  font-family: 'Poppins', sans-serif;
-
-
-	  color: snow;
-	  background: #77d8d8;
-
+	  font-family: 'Ubuntu', sans-serif;
+	  color: var(--color-text);
       }
-      
+
+
       header {
 	  display: flex;
 	  margin-top: 70px;
-	  animation: move 2s both;
-      }
-
-      
-      section {
-	  font-size: 35px;
-	  font-weight: lighter;
-      }
-
-      section p {
-	  display: inline;
+	  animation: move-down 2s both 0.5s;
+	  opacity: 0;
+	  height: 100px;
       }
       
-      footer {
-	  margin: 100px auto;
-	  animation: ;
-      }
-
       .unit {
 	  width: 50%;
+
       }
 
+      h1 {
+	  height: 100%;
+      }
 
       h1 a {
 	  display: flex;
 	  text-decoration: none;
-
+	  color: var(--color-link);
+	  align-items: flex-end;
+	  height: 100%;
       }
 
+      .avatar #myCanvas {
+	  width: 100%;
+	  filter: invert(1);
+      }
 
+      .avatar {
+	  margin-left: -5px;
+	  margin-right: 20px;
+	  margin-bottom: -5px;
+      }
       
+      .id {
+	  width: 100%;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-end;
+      }
+	  
       .name  {
+	  font-weight: normal;
 	  font-size: 22px;
-	  color: snow;
+	  transition: all 0.2s;
       }
 
       .handle {
-	  display: block;
-	  color: #0779e4;
-	  font-size: 16px;
-	  font-weight: normal;
-
-      }
-
-      
-
-      footer a {
-	  color: snow;
-	  text-decoration: none;
-	  border-bottom: 1px solid #0779e4;
-	  padding-bottom: 1px;
-      }
-
-      
-      .avatar, .id {
-	  width: 50%;
-      }
-      
-      .avatar img {
-	  max-width: 200px;
-	  mix-blend-mode: multiply;
-	  opacity: 0.5;
-
-      }
-
-      
-      .contact li {
-	  opacity: 0.4;
+	  font-size: 14px;
 	  transition: all 0.2s;
       }
       
-      .contact li:hover {
-	  opacity: 0.9;
+      .name:hover, .handle:hover {
+	  filter: brightness(1.6);
+      }
+      
+      nav, .contact {
+	  height: 100%;
       }
       
       ul {
-	  list-style-type: none;
+	  padding: 0;
+	  height: 100%;
 	  display: flex;
 	  justify-content: flex-end;
+	  align-items: flex-end;
+
+	  list-style-type: none;
       }
 
       li {
 	  margin-left: 20px;
+	  transition: all 0.2s;
+	  filter: invert(1);
+	  opacity: 0.6;
       }
 
-      
+      li:hover {
+	  opacity: 0.9;
+      }
+
+
+      li:active {
+	  transform: translateY(1px);
+      }
+
       a img {
-	  max-width: 30px;
+	  max-height: 30px;
+      }
+
+      section {
+	  margin-top: 100px;
+	  animation: show 2s both 1s;
+	  opacity: 0;
+
+      }
+
+      section p {
+	  transition: all 0.2s;
+	  font-size: 35px;
+	  font-weight: lighter;
+	  display: inline;
       }
       
+      section p:hover {
+	  filter: brightness(0.8);
+      }
+
+      footer {
+	  margin: 100px auto;
+	  animation: move-up 2s both 0.5s;
+	  opacity: 0;
+      }
+
+      footer a {
+	  color: var(--color-link);
+	  text-decoration: none;
+	  border-bottom: 1px solid var(--color-link);
+	  border-radius: 2px;
+	  padding-bottom: 2px;
+	  transition: all 0.2s;
+      }
+      
+      footer a:hover {
+	  filter: brightness(1.6);
+	  border-bottom: 3px solid var(--color-link);
+	  
+      }
+
+      @keyframes show {
+	  to {
+	      opacity: 1;
+	  }
+      }
+
+      @keyframes move-down {
+	  from {
+	      transform: translateY(-50px);
+	  }
+	  to {
+	      opacity: 1;
+	      transform: translateY(0)
+	  }
+      }
+
+      @keyframes move-up {
+	  from {
+	      transform: translateY(50px);
+	  }
+	  to {
+	      opacity: 1;
+	      transform: translateY(0)
+	  }
+      }
+
+      @media screen and (max-width: 360px) {
+	  header, h1 a {
+	      flex-direction: column;
+	      margin-top: 20px;
+	      align-items: center;
+	  }
+	  
+	  .avatar {
+	      width: 50%;
+	      margin: 0;
+	  }
+
+	  .id {
+	      margin: 20px auto;
+	      align-items: center;
+	  }
+
+	  .unit {
+	      width: 100%;
+	  }
+
+	  ul {
+	      justify-content: center;
+	  }
+
+	  li {
+	      margin: 10px;
+	  }
+	  
+	  section {
+	      margin-top: 190px;
+	  }
+
+	  footer {
+	      margin: 50px auto;
+	  }
+	  
+	  section, footer {
+	      text-align: center;
+	  }
+      }
+
     </style>
   </head>
   <body>
+    
     <header>
       <div class="unit">
 	<h1>
 	  <a href="https://rodionsibov.github.io">
 	    <div class="avatar">
-	      <img src="./avatar.png">
+	      <canvas id="myCanvas"></canvas>
 	    </div>
 	    <div class="id">
 	      <span class="name">Rodion Sibov</span>
@@ -145,20 +263,145 @@
       <div class="unit">
 	<nav>
 	  <ul class="contact">
-	    <li><a href="#"><img src="https://image.flaticon.com/icons/svg/1384/1384005.svg"></a></li>
-	    <li><a href="#"><img src="https://image.flaticon.com/icons/svg/2111/2111425.svg"></a></li>
-	    <li><a href="#"><img src="https://image.flaticon.com/icons/svg/2258/2258570.svg"></a></li>
+	    <li><a href="https://www.facebook.com/rodion.sibov.5"><img src="https://image.flaticon.com/icons/svg/1384/1384005.svg"></a></li>
+	    <li><a href="https://github.com/rodionsibov"><img src="https://image.flaticon.com/icons/svg/2111/2111432.svg"></a></li>
+	    <li><a href="mailto:rodionsibov@gmail.com"><img src="https://image.flaticon.com/icons/svg/2258/2258570.svg"></a></li>
 	  </ul>
 	</nav>
       </div>
     </header>
     <section>
-      <p>Hi, I’m Rodion.</p>
+      <p><b>Hi, I’m Rodion.</b></p>
       <p>I have a life interest for all things web and developing code.</p>
-      <p>Say Hello!</p>
+      <p><b>Say Hello!</b></p>
     </section>
     <footer>
       <p>My site is powered by <a href="http://pages.github.com/">GitHub Pages</a>, and&nbsp;its design is&nbsp;<a href="https://github.com/rodionsibov/rodionsibov.github.io">open&nbsp;source</a>.</p>
     </footer>
+
+    <script>
+      //line text
+      
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var mask;
+
+      var pointCount = 500;
+      var str = "R.";
+      var fontStr = "bold 128pt Helvetica Neue, Helvetica, Arial, sans-serif";
+
+      ctx.font = fontStr;
+      ctx.textAlign = "center";
+      c.width = ctx.measureText(str).width;
+      c.height = 128; // Set to font size
+      
+      var whitePixels = [];
+      var points = [];
+      var point = function(x,y,vx,vy){
+	  this.x = x;
+	  this.y = y;
+	  this.vx = vx || 1;
+	  this.vy = vy || 1;
+      }
+      point.prototype.update = function() {
+	  ctx.beginPath();
+	  ctx.fillStyle = "#95a5a6";
+	  ctx.arc(this.x,this.y,1,0,2*Math.PI);
+	  ctx.fill();
+	  ctx.closePath();
+  
+	  // Change direction if running into black pixel
+	  if (this.x+this.vx >= c.width || this.x+this.vx < 0 || mask.data[coordsToI(this.x+this.vx, this.y, mask.width)] != 255) {
+	      this.vx *= -1;
+	      this.x += this.vx*2;
+	  }
+	  if (this.y+this.vy >= c.height || this.y+this.vy < 0 || mask.data[coordsToI(this.x, this.y+this.vy, mask.width)] != 255) {
+	      this.vy *= -1;
+	      this.y += this.vy*2;
+	  }
+	  
+	  for (var k = 0, m = points.length; k<m; k++) {
+	      if (points[k]===this) continue;
+	      
+	      var d = Math.sqrt(Math.pow(this.x-points[k].x,2)+Math.pow(this.y-points[k].y,2));
+	      if (d < 5) {
+		  ctx.lineWidth = .2;
+		  ctx.beginPath();
+		  ctx.moveTo(this.x,this.y);
+		  ctx.lineTo(points[k].x,points[k].y);
+		  ctx.stroke();
+	      }
+	      if (d < 20) {
+		  ctx.lineWidth = .1;
+		  ctx.beginPath();
+		  ctx.moveTo(this.x,this.y);
+		  ctx.lineTo(points[k].x,points[k].y);
+		  ctx.stroke();
+	      }
+	  }
+	  
+	  this.x += this.vx;
+	  this.y += this.vy;
+      }
+
+      function loop() {
+	  ctx.clearRect(0,0,c.width,c.height);
+	  for (var k = 0, m = points.length; k < m; k++) {
+	      points[k].update();
+	  }
+      }
+      
+      function init() {
+	  // Draw text
+	  ctx.beginPath();
+	  ctx.fillStyle = "black";
+	  ctx.rect(0,0,c.width,c.height);
+	  ctx.fill();
+	  ctx.font = fontStr;
+	  ctx.textAlign = "left";
+	  ctx.fillStyle = "white";
+	  ctx.fillText(str,0,c.height/2+(c.height / 2));
+	  ctx.closePath();
+  
+	  // Save mask
+	  mask = ctx.getImageData(0,0,c.width,c.height);
+  
+	  // Draw background
+	  ctx.clearRect(0,0,c.width,c.height);
+  
+	  // Save all white pixels in an array
+	  for (var i = 0; i < mask.data.length; i += 4) {
+	      if (mask.data[i] == 255 && mask.data[i+1] == 255 && mask.data[i+2] == 255 && mask.data[i+3] == 255) {
+		  whitePixels.push([iToX(i,mask.width),iToY(i,mask.width)]);
+	      }
+	  }
+  
+	  for (var k = 0; k < pointCount; k++) {
+	      addPoint();
+	  }
+      }
+      
+      function addPoint() {
+	  var spawn = whitePixels[Math.floor(Math.random()*whitePixels.length)];
+  
+	  var p = new point(spawn[0],spawn[1], Math.floor(Math.random()*2-1), Math.floor(Math.random()*2-1));
+	  points.push(p);
+      }
+
+      function iToX(i,w) {
+	  return ((i%(4*w))/4);
+      }
+      function iToY(i,w) {
+	  return (Math.floor(i/(4*w)));
+      }
+      function coordsToI(x,y,w) {
+	  return ((mask.width*y)+x)*4;
+
+      }
+      
+      setInterval(loop,50);
+      init();
+    </script>
+
   </body>
 </html>
