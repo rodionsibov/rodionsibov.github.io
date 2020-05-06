@@ -26,11 +26,13 @@
       }
       
       body {
+
 	  background: var(--color-bg);
 	  font-family: 'Ubuntu', sans-serif;
 	  color: var(--color-text);
 	  background-size: 400% 400%;
 	  animation: gradient 15s ease infinite;
+
       }
 
       @keyframes gradient {
@@ -231,6 +233,8 @@
       }
 
       .circle {
+	  opacity: 0;
+	  animation: show 2s both 3.5s;
 	  width: 100px;
 	  height: 100px;
       }
