@@ -25,8 +25,13 @@
 	  margin: 0;
       }
       
+      .filter {
+	  filter: sepia(1);
+      }
+
+
+
       body {
-	  filter: sepia(0);
 	  background: var(--color-bg);
 	  font-family: 'Ubuntu', sans-serif;
 	  color: var(--color-text);
@@ -338,19 +343,18 @@
 
     <script>
 
-      //change color 
+      //change filter 
       console.log('Press key "C" to change the color')
       
-      let i = 0
       document.onkeydown = () => {
 	  if (event.keyCode == 67) {
-	      document.querySelector('body').style.filter = `sepia(1)`
-
+	      document.querySelector('body').classList.toggle('filter')
+	
 	  } 
       }
 
 
-
+      //type effect
       let j = 0;
       const txt = `Say Hello!`; 
       const speed = 200;
