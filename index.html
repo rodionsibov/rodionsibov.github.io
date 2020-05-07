@@ -26,7 +26,7 @@
       }
       
       body {
-
+	  filter: sepia(0);
 	  background: var(--color-bg);
 	  font-family: 'Ubuntu', sans-serif;
 	  color: var(--color-text);
@@ -325,7 +325,7 @@
       <section>
 	<p><b>Hi, I’m Rodion.</b></p>
 	<p>I have a life interest for all things web and developing code.</p>
-	<p><b>Say Hello!</b></p>
+	<p><b><span id="demo"></span></b></p>
       </section>
 
       <footer>
@@ -344,10 +344,28 @@
       let i = 0
       document.onkeydown = () => {
 	  if (event.keyCode == 67) {
-	      document.querySelector('body').style.filter = `grayscale(1);`
+	      document.querySelector('body').style.filter = `sepia(1)`
 
 	  } 
       }
+
+
+
+      let j = 0;
+      const txt = `Say Hello!`; 
+      const speed = 200;
+      
+      function typeWriter() {
+	  if (j < txt.length) {
+	      document.getElementById("demo").innerHTML += txt.charAt(j);
+	      j++;
+	      setTimeout(typeWriter, speed);
+	  }
+      }
+
+
+      setTimeout(typeWriter, 3000)
+
 
 
 
