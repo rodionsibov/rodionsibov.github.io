@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hello, I am Rodion. I have a life interest for all things web and developing code.">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+    <title>Rodion Sibovv</title>
+    <style>
+      
+      :root {
+	  --mainColor: #eaeaea;
+	  --secondaryColor: #fff;
+
+	  --borderColor: #c1c1c1;
+
+	  --mainText: black;
+	  --secondaryText: #4b5156;
+      }
+
+      ::selection {
+      }
+
+      html, body {
+	  margin: 0;
+	  padding: 0;
+      }
+      
+      h1, h2, h3, h4, h5, h6, strong {
+	  color: var(--mainText);
+	  font-family: 'Russo One', sans-serif;
+	  font-weight: 500;
+      }
+
+      p, li, span, label, input, textarea {
+	  color: var(--secondaryText);
+	  font-family: 'Roboto Mono', monospace;
+  }
+
+      a {
+	  text-decoration: none;
+	  color: #17a2b8;
+      }
+
+      ul {
+	  list-style: none;
+      }
+
+      h1 { font-size: 56px; }
+      h2 { font-size: 36px; }
+      h3 { font-size: 28px; }
+      h4 { font-size: 24px; }
+      h5 { font-size: 20px; }
+      h6 { font-size: 16px; }
+      
+      .s1 {
+	  background-color: var(--mainColor);
+	  border-bottom: var(--borderColor) 1px solid;
+	  overflow: auto;
+      }
+
+      .s2 {
+	  background-color: var(--secondaryColor);
+	  border-bottom: var(--borderColor) 1px solid;
+	  overflow: auto;
+      }
+
+      .main-container {
+	  width: 1000px;
+	  margin: 0 auto;
+      }
+
+      .greeting-wrapper {
+	  display: grid;
+	  text-align: center;
+	  align-content: center;
+	  border: 2px dashed lightcoral;
+	  min-height: 10em;
+      }
+
+      .intro-wrapper {
+	  background-color: var(--secondaryColor);
+	  border: 1px solid var(--borderColor);
+	  box-shadow: -1px 1px 3px -1 rgba(0,0,0,0.75);
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 3em 30em;
+	  grid-template-areas:
+	      'nav-wrapper nav-wrapper'
+		  'left-column right-column'
+      }
+
+      .nav-wrapper {
+	  grid-area: nav-wrapper;
+	  border: 1px dashed lightcoral;
+      }
+
+      .left-column {
+	  grid-area: left-column;
+	  border: 1px dashed lightcoral;
+      }
+
+      .right-column {
+	  grid-area: right-column;
+	  border: 1px dashed lightcoral;
+      }
+
+      @media screen and (max-width: 1000px) {
+	  .main-container {
+	      width: 95%;
+	  }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section class="s1">
+      <div class="main-container">
+	<div class="greeting-wrapper">
+	<h1>Hi, I'm Rodion Sibov</h1>
+	</div>
+
+	<div class="intro-wrapper">
+	  <div class="nav-wrapper">
+	    Nav
+	  </div>
+	  
+	  <div class="left-column">
+	    left-column
+	  </div>
+	  
+	  <div class="right-column">
+	    right-column
+	  </div>
+	</div>
+      </div>
+    </section>
+    
+    <section class="s2">
+      <div class="main-container">
+	About
+      </div>
+    </section>
+
+    <section class="s1">
+      <div class="main-container">
+	Portfolio
+      </div>
+    </section>
+
+    <section class="s2">
+      <div class="main-container">
+	Contact
+      </div>
+    </section>
+
+    <script>
+    </script>
+    
+  </body>
+</html>
