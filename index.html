@@ -334,7 +334,7 @@
 	</header>
 
 	<section>
-	  <p><b>Hi, I’m Rodion.</b></p>
+	  <p onclick="vibrate([300,100])"><b>Hi, I’m Rodion.</b></p>
 	  <p>I have a life interest for all things web and developing code.</p>
 	  <p><b><span id="demo"></span></b></p>
 	</section>
@@ -375,6 +375,15 @@
 
       setTimeout(typeWriter, 3000)
 
+
+
+
+      
+      function vibrate(ms) {
+	  navigator.vibrate(ms);
+      }
+
+      
     </script>
     
   </body>
