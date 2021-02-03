@@ -354,7 +354,10 @@
 
       document.onkeydown = () => {
 	  if (event.keyCode == 67) {
-	      document.querySelector('body').classList.toggle('filter')
+//	      document.querySelector('body').classList.toggle('filter')
+	      document.querySelector('body').style.background = `aliceblue`;
+	      document.querySelector('body').style.color = "#333";
+	      document.querySelectorAll(".contact li").forEach(el => el.style.filter = "none");
 	  }
       }
 
