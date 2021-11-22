@@ -17,30 +17,16 @@
     box-sizing: border-box;
 }
 
-.filter {
-    filter: sepia(1);
-}
-
-
-
 body {
+    height: 100vh;
     background: var(--color-bg);
-    font-family: 'Ubuntu', sans-serif;
-    color: var(--color-text);
     background-size: 400% 400%;
+    color: var(--color-text);
     animation: gradient 15s ease infinite;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
-/* body {
-    background: radial-gradient(ellipse at center, white 20%, #d2d2d2 100%);
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    font: 500 100%/1.4 system-ui, sans-serif;
-} */
 
 @keyframes gradient {
     0% {
