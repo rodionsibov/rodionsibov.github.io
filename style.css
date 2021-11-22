@@ -7,8 +7,8 @@
 }
 
 ::selection {
-    background: #e16162;
-    color: #001e1d;
+    background: #001e1d;
+    color: #e16162;
 }
 
 * {
@@ -26,7 +26,7 @@ a {
 body {
     height: 100vh;
     background: var(--color-bg);
-    color: var(--color-text);
+    color: var(--color-text);   
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
@@ -92,7 +92,7 @@ section p {
 }
 
 section p:hover {
-    color: gold;
+    color: var(--color-link)
 }
 
 footer {
