@@ -13,7 +13,7 @@ function typeWriter() {
 
 const sectionEl = document.querySelector('section')
 sectionEl.addEventListener('click', () => {
-	let random = Math.floor(Math.random() * 100) + 104
+	let random = Math.floor(Math.random() * 100) + 2
 	
 	console.log(random);
 	Array.from(sectionEl).forEach(item => console.log(item))
