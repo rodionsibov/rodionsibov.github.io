@@ -1,407 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Hello, I am Rodion. I have a life interest for all things web and developing code.">
 
-    <meta name="theme-color" content="#2e279d">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Hello, I am Rodion. I have a life interest for all things web and developing code.">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
-    <title>Rodion Sibov 🧔 rodionsibov</title>
+	<meta name="theme-color" content="#2e279d">
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
-      
-      :root {
-	  --color-bg: linear-gradient(33deg, #4d80e4 20%, #2e279d 60%) no-repeat;
-	  --color-link: #46b3e6;
-	  --color-text: #dff6f0;
-      }
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Rodion Sibov 🧔 rodionsibov</title>
 
-      ::selection {
-	  background: gold;
-	  color: black;
-      }
+	<style>
+		
+	</style>
+</head>
 
-      * {
-	  margin: 0;
-      }
-      
-      .filter {
-	  filter: sepia(1);
-      }
+<body>
+	<div class="container-bg">
+		<div class="circle">
+			<div class="wave">
+			</div>
+		</div>
 
+		<div class="container">
+			<header>
+				<div class="unit">
+					<h1>
+						<a href="https://rodionsibov.github.io">
+							<div class="avatar">
+							</div>
 
+							<div class="id">
+								<span class="name">Rodion Sibov</span>
+								<span class="handle">@rodionsibov</span>
+							</div>
+						</a>
+					</h1>
+				</div>
 
-      body {
-	  background: var(--color-bg);
-	  font-family: 'Ubuntu', sans-serif;
-	  color: var(--color-text);
-	  background-size: 400% 400%;
-	  animation: gradient 15s ease infinite;
+				<div class="unit">
+					<nav>
+						<ul class="contact">
+							<li><a href="https://www.facebook.com/rodion.sibov.5"><img
+										src="https://image.flaticon.com/icons/svg/1384/1384005.svg"></a></li>
+							<li><a href="https://github.com/rodionsibov"><img
+										src="https://image.flaticon.com/icons/svg/2111/2111432.svg"></a></li>
+							<li><a href="mailto:rodionsibov@gmail.com"><img
+										src="https://image.flaticon.com/icons/svg/2258/2258570.svg"></a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 
-      }
+			<section>
+				<p onclick="vibrate(200)"><b>Hi, I’m Rodion.</b></p>
+				<p onclick="vibrate(100)">I have a life interest for all things web and developing code.</p>
+				<p onclick="vibrate(200)"><b><span id="demo"></span></b></p>
+			</section>
 
-      @keyframes gradient {
-	  0% {
-	      background-position: 0% 50%;
-	  }
-	  50% {
-	      background-position: 100% 50%;
-	  }
-	  100% {
-	      background-position: 0% 50%;
-	  }
-      }
-      
-      header {
-	  display: flex;
-	  animation: move-down 2s both 0.5s;
-	  opacity: 0;
-	  height: 100px;
-	  width: 100%;
-      }
-      
-      .unit {
-	  width: 50%;
-	  height: 100%;
-      }
+			<footer>
+				<p>My site is powered by <a href="http://pages.github.com/">GitHub Pages</a>, and&nbsp;its design
+					is&nbsp;<a href="https://github.com/rodionsibov/rodionsibov.github.io">open&nbsp;source</a>.</p>
+			</footer>
 
-      h1 {
-	  height: 100%;
-      }
-
-      h1 a {
-	  display: flex;
-	  text-decoration: none;
-	  color: var(--color-link);
-	  align-items: flex-end;
-	  height: 100%;
-
-      }
-      
-      .id {
-	  height: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: flex-end;
-      }
-      
-
-
-
-      .name  {
-	  font-weight: normal;
-	  font-size: 22px;
-	  transition: all 0.2s;
-
-      }
-
-      .handle {
-	  font-size: 14px;
-	  transition: all 0.2s;
-      }
-      
-      .name:hover,
-      .handle:hover {
-	  filter: brightness(1.6);
-      }
-      
-      nav,
-      .contact {
-	  height: 100%;
-	  width: 100%;
-      }
-      
-      ul {
-	  padding: 0;
-	  width: 100%;
-	  height: 100%;
-	  display: flex;
-	  justify-content: flex-end;
-	  align-items: flex-end;
-	  list-style-type: none;
-      }
-
-      li {
-	  margin-left: 20px;
-	  transition: all 0.2s;
-	  filter: invert(1);
-	  opacity: 0.6;
-
-      }
-
-      li:hover {
-	  transform: scale(1.05);
-	  opacity: 0.9;
-      }
-
-      li:active {
-	  transform: translateY(1px);
-      }
-
-      a img {
-	  max-height: 30px;
-      }
-
-      section {
-	  margin-top: 100px;
-	  animation: show 2s both 1s;
-	  opacity: 0;
-      }
-
-      section p {
-	  transition: all 0.2s;
-	  font-size: 35px;
-	  display: inline;
-      }
-      
-      section p:hover {
-	  color: gold;
-      }
-
-      footer {
-	  margin: 100px auto;
-	  animation: move-up 2s both 0.5s;
-	  opacity: 0;
-      }
-
-      footer a {
-	  color: var(--color-link);
-	  text-decoration: none;
-	  border-bottom: 1px solid var(--color-link);
-	  border-radius: 2px;
-	  padding-bottom: 2px;
-	  transition: all 0.2s;
-      }
-      
-      footer a:hover {
-	  filter: brightness(1.6);
-	  border-bottom: 3px solid var(--color-link);
-	  
-      }
-
-      @keyframes show {
-	  to {
-	      opacity: 1;
-	  }
-      }
-
-      @keyframes move-down {
-	  from {
-	      transform: translateY(-50px);
-	  }
-	  to {
-	      opacity: 1;
-	      transform: translateY(0)
-	  }
-      }
-
-      @keyframes move-up {
-	  from {
-	      transform: translateY(50px);
-	  }
-	  to {
-	      opacity: 1;
-	      transform: translateY(0)
-	  }
-      }
-
-      @media screen and (max-width: 360px) {
-	  header, h1 a {
-	      flex-direction: column;
-	      margin-top: -20px;
-	      align-items: center;
-	  }
-	  
-
-	  footer {
-	      margin: 60px auto;
-	  }
-
-	  .id {
-	      margin: 20px auto;
-	      align-items: center;
-	  }
-
-	  .unit {
-	      width: 100%;
-	  }
-
-	  ul {
-	      justify-content: center;
-	  }
-
-	  li {
-	      margin: 10px;
-	  }
-	  
-	  section, footer {
-	      text-align: center;
-	  }
-      }
-
-      .circle {
-	  opacity: 0;
-	  animation: show 2s both 3.5s;
-	  width: 100px;
-	  height: 100px;
-      }
-
-      .wave {
-	  z-index: -100;
-	  position: relative;
-	  width: 100%;
-	  height: 100%;
-      }
-      
-      .wave:before,
-      .wave:after {
-	  content: "";
-	  position: absolute;
-	  width: 600%;
-	  height: 600%;
-      }
-      
-      .wave:before {
-	  border-radius: 37%;
-	  background: rgba(46, 39, 157, 0.9);
-	  animation: animate 10s linear infinite;
-      }
-
-      .wave:after {
-	  border-radius: 43%;
-	  background: rgba(223, 246, 240, 0.1);
-	  animation: animate 20s linear infinite;
-      }
-      
-      @keyframes animate {
-	  0% {
-	      transform: translate(-50%, -75%) rotate(0deg);
-	  }
-	  100% {
-	      transform: translate(-50%, -75%) rotate(360deg);
-	  }
-      }
-
-      .container {
-	  width: 80%;
-	  margin: 0 auto;
-
-      }
-
-      .container-bg {
-	  overflow: hidden;
-
-      }
-      
-    </style>
-  </head>
-  <body>
-    <div class="container-bg">
-      <div class="circle">
-	<div class="wave">
+		</div>
 	</div>
-      </div>
-      
-      <div class="container">    
-	<header>
-	  <div class="unit">
-	    <h1>
-	      <a href="https://rodionsibov.github.io">
-		<div class="avatar">
-		</div>
-
-		<div class="id">
-		  <span class="name">Rodion Sibov</span>
-		  <span class="handle">@rodionsibov</span>
-		</div>
-	      </a>
-	    </h1>
-	  </div>
-
-	  <div class="unit">
-	    <nav>
-	      <ul class="contact">
-		<li><a href="https://www.facebook.com/rodion.sibov.5"><img src="https://image.flaticon.com/icons/svg/1384/1384005.svg"></a></li>
-		<li><a href="https://github.com/rodionsibov"><img src="https://image.flaticon.com/icons/svg/2111/2111432.svg"></a></li>
-		<li><a href="mailto:rodionsibov@gmail.com"><img src="https://image.flaticon.com/icons/svg/2258/2258570.svg"></a></li>
-	      </ul>
-	    </nav>
-	  </div>
-	</header>
-
-	<section>
-	  <p onclick="vibrate(200)"><b>Hi, I’m Rodion.</b></p>
-	  <p onclick="vibrate(100)">I have a life interest for all things web and developing code.</p>
-	  <p onclick="vibrate(200)"><b><span id="demo"></span></b></p>
-	</section>
-
-	<footer>
-	  <p>My site is powered by <a href="http://pages.github.com/">GitHub Pages</a>, and&nbsp;its design is&nbsp;<a href="https://github.com/rodionsibov/rodionsibov.github.io">open&nbsp;source</a>.</p>
-	</footer>
-
-      </div>
-    </div>    
 
 
-    <script>
+	<script>
 
-      //change filter 
-      console.log('Press key "C" to change the color')
-
-      document.onkeydown = () => {
-	  if (event.keyCode == 67) {
-//	      document.querySelector('body').classList.toggle('filter')
-	      document.querySelector('body').style.background = `aliceblue`;
-	      document.querySelector('body').style.color = "#333";
-	      document.querySelectorAll(".contact li").forEach(el => el.style.filter = "none");
-	  }
-      }
-
-
-      //type effect
-      let j = 0;
-      const txt = `Say Hello!`; 
-      const speed = 200;
-      
-      function typeWriter() {
-	  if (j < txt.length) {
-	      document.getElementById("demo").innerHTML += txt.charAt(j);
-	      j++;
-	      setTimeout(typeWriter, speed);
-	  }
-      }
-
-
-      setTimeout(typeWriter, 3000)
-
-
-      
-      function vibrate(ms) {
-	  navigator.vibrate(ms);
-      }
+	
 
 
 
+	</script>
+	<script src="main.js"></script>
 
-      const changeFavicon = emoji => {
-	  // Ensure we have access to the document, i.e. we are in the browser.
-	  if (typeof window === 'undefined') return;
-	  const link = window.document.querySelector("link[rel*='icon']") || window.document.createElement("link");
-	  link.type = "image/svg+xml";
-	  link.rel = "shortcut icon";
-	  link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2280%22>${emoji}</text></svg>`;
-	  window.document.getElementsByTagName("head")[0].appendChild(link);
-      }; // Thanks to https://formito.com/tools/favicon
+</body>
 
-      changeFavicon("🧔");
-
-      
-      
-    </script>
-    
-  </body>
 </html>
