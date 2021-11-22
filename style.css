@@ -70,7 +70,7 @@ header {
 .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 15px;
     font-size: 2rem;
 }
 
