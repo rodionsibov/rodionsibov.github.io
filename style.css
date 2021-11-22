@@ -41,6 +41,7 @@ body {
 }
 
 header {
+    margin-top: 50px;
     animation: move-down 2s both 0.5s;
     opacity: 0;
     display: flex;
@@ -132,26 +133,26 @@ footer a:hover {
     }
 }
 
-.custom-shape-divider-top-1637589015 {
+.custom-shape-divider-top-1637589272 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    opacity: 0.7;
 }
 
-.custom-shape-divider-top-1637589015 svg {
+.custom-shape-divider-top-1637589272 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 150px;
+    height: 30px;
 }
 
-.custom-shape-divider-top-1637589015 .shape-fill {
+.custom-shape-divider-top-1637589272 .shape-fill {
     fill: #FFFFFF;
 }
-
 
 @media (max-width: 400px) {
     body {
