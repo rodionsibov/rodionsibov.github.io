@@ -53,7 +53,7 @@ header {
 }
 
 .name {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     transition: all 0.2s;
 }
 
@@ -170,6 +170,10 @@ footer a:hover {
         flex-direction: column;
         justify-content: inherit;
         gap: 30px;
+    }
+
+    .name {
+        font-size: 1.5rem;
     }
 
     section p {
