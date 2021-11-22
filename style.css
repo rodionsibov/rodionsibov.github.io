@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Roboto:wght@100;400;900&display=swap');
 
 :root {
-    --color-bg: linear-gradient(60deg, darkslategray 0%, dimgray 100%);
-    --color-link: gold;
-    --color-text: whitesmoke;   
+    --color-bg: #004643;
+    --color-link: #f9bc60;
+    --color-text: #fffffe;   
 }
 
 ::selection {
-    background: gold;
-    color: #111;
+    background: #e16162;
+    color: #001e1d;
 }
 
 * {
@@ -25,7 +25,7 @@ a {
 
 body {
     height: 100vh;
-    background: darkslategray;
+    background: var(--color-bg);
     color: var(--color-text);
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -87,6 +87,7 @@ section {
 section p {
     display: inline;
     font-size: 3rem;
+    font-weight: 100;
     transition: all 0.2s;
 }
 
@@ -98,6 +99,7 @@ footer {
     animation: move-up 2s both 0.5s;
     opacity: 0;
     align-self: flex-end;
+    font-size: 0.9rem;
 }
 
 footer a:hover {
@@ -159,6 +161,10 @@ footer a:hover {
         text-align: center;
     }
 
+    section {
+        padding: 20px;
+    }
+
     header {
         margin-top: 100px;
         flex-direction: column;
@@ -171,8 +177,9 @@ footer a:hover {
     }
 
     .contact {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 
-
+        
 }
