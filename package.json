@@ -1,0 +1,23 @@
+{
+  "name": "rodionsibov.github.io",
+  "version": "1.0.0",
+  "description": "🌟 Let's bring the designer’s concept to life through a mix of HTML, CSS and JavaScript 😉",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodionsibov/rodionsibov.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodionsibov/rodionsibov.github.io/issues"
+  },
+  "homepage": "https://github.com/rodionsibov/rodionsibov.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
