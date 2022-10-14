@@ -1,20 +1,15 @@
-let j = 0;
-const txt = `Say Hello!`;
-const speed = 200;
+new Typewriter("#typewriter", {
+  strings: ["Hello", "World"],
+  autoStart: true,
+});
 
-function typeWriter() {
-	if (j < txt.length) {
-		document.querySelector('#demo').innerHTML += txt.charAt(j);
-		j++;
-		setTimeout(typeWriter, speed);
-	}
-}
-setTimeout(typeWriter, 2000)
+document.addEventListener("keypress", (e) => {
+  if (e.key === "h") {
+    document.querySelector("canvas").classList.remove("hidden");
+  }
 
-listener = document.addEventListener("keypress", (e) => {
-  if (e.key === "t") {
-    // document.body.classList.toggle('dark')
-    clearInterval(id);
+  if (e.key === "b") {
+    document.querySelector("canvas").classList.add("hidden");
   }
 });
 
@@ -60,4 +55,3 @@ const draw = () => {
 };
 
 let id = setInterval(draw, 30);
-
