@@ -56,7 +56,6 @@ const draw = () => {
 
 setInterval(draw, 30);
 
-console.log(gsap);
 gsap.from("header", { y: -100, duration: 1 })
 gsap.from("section", { opacity: 0, duration: 3 })
 gsap.from("footer", { y: 100, duration: 1 })
