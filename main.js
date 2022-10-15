@@ -56,6 +56,24 @@ const draw = () => {
 
 setInterval(draw, 30);
 
-gsap.from("header", { y: -100, duration: 1 })
-gsap.from("section", { opacity: 0, duration: 3 })
-gsap.from("footer", { y: 100, duration: 1 })
+gsap.from("header", { y: -100, duration: 1 });
+gsap.from("section", { opacity: 0, duration: 3 });
+gsap.from("footer", { y: 100, duration: 1 });
+
+tippy("#github", {
+  content: "Go to Github",
+});
+tippy("#email", {
+  content: "Send Email",
+});
+tippy("#facebook", {
+  content: "Go to Facebook",
+});
+tippy("#bio", {
+  content:
+    "I'm a web developer. My passion is to develop modern and responsive websites.",
+});
+tippy("#about", {
+  content:
+    "The fact is that I get a huge moral satisfaction, when I create or improve something with my own hands. And in programming the results of your actions can be seen instantly. I like it a lot. I also enjoy wireframing, UI, UX and design in general.",
+});

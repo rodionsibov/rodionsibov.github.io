@@ -34,7 +34,7 @@
         <div class="text-[#0f0]">
           <a href="https://rodionsibov.github.io">
             <div class="avatar"></div>
-            <div class="flex flex-col items-center md:items-start">
+            <div id="bio" class="flex flex-col items-center md:items-start">
               <span class="text-xl hover:opacity-60 transition duration-200"
                 >Rodion Sibov</span
               >
@@ -48,19 +48,19 @@
         <div class="flex gap-3 text-2xl text-[#0f0]">
           <a
             class="hover:-translate-y-1 hover:text-gray-50 transition duration-200"
-            title="Github"
+            id="github"
             href="https://github.com/rodionsibov"
             ><i class="fab fa-github"></i
           ></a>
           <a
             class="hover:-translate-y-1 hover:text-gray-50 transition duration-200"
-            title="Mail"
+            id="email"
             href="mailto:rodionsibov@gmail.com"
             ><i class="fas fa-envelope"></i
           ></a>
           <a
             class="hover:-translate-y-1 hover:text-gray-50 transition duration-200"
-            title="Facebook"
+            id="facebook"
             href="https://www.facebook.com/rodion.sibov.5"
             ><i class="fab fa-facebook"></i
           ></a>
@@ -72,6 +72,7 @@
           ><b>Hi, I’m Rodion.</b></span
         >
         <span
+          id="about"
           class="font-thin text-white hover:text-[#0f0] transition duration-200"
         >
           I have a life interest for all things web and developing code.
@@ -103,6 +104,8 @@
     <canvas id="matrix" class="hidden absolute inset-0"></canvas>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="main.js"></script>
   </body>
 </html>
