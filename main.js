@@ -3,12 +3,16 @@ new Typewriter("#typewriter", {
   autoStart: true,
 });
 
+console.log(
+  'Press "Enter" to show the magic. Press "h" to go to the home page.'
+);
+
 document.addEventListener("keypress", (e) => {
-  if (e.key === "h") {
+  if (e.key === "Enter") {
     document.querySelector("canvas").classList.remove("hidden");
   }
 
-  if (e.key === "b") {
+  if (e.key === "h") {
     document.querySelector("canvas").classList.add("hidden");
   }
 });
