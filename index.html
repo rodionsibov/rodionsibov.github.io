@@ -23,63 +23,14 @@
     <style type="text/tailwindcss">
       @layer utilities {
         .bg {
-          position: fixed;
-          top: -50%;
-          left: -50%;
-          right: -50%;
-          bottom: -50%;
-          width: 200%;
-          height: 200vh;
-          background: transparent
-            url("http://assets.iceable.com/img/noise-transparent.png") repeat 0
-            0;
-          background-repeat: repeat;
-          animation: bg-animation 0.2s infinite;
-          opacity: 0.9;
-          visibility: visible;
-        }
-
-        @keyframes bg-animation {
-          0% {
-            transform: translate(0, 0);
-          }
-          10% {
-            transform: translate(-5%, -5%);
-          }
-          20% {
-            transform: translate(-10%, 5%);
-          }
-          30% {
-            transform: translate(5%, -10%);
-          }
-          40% {
-            transform: translate(-5%, 15%);
-          }
-          50% {
-            transform: translate(-10%, 5%);
-          }
-          60% {
-            transform: translate(15%, 0);
-          }
-          70% {
-            transform: translate(0, 10%);
-          }
-          80% {
-            transform: translate(-15%, 0);
-          }
-          90% {
-            transform: translate(10%, 5%);
-          }
-          100% {
-            transform: translate(5%, 0);
-          }
+          background-image: url(https://images.unsplash.com/photo-1496361910809-f54291f339b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80);
+          background-size: cover;
         }
       }
     </style>
     <title>Rodion Sibov | rodionsibov</title>
   </head>
-  <body class="bg-black text-gray-50 overflow-hidden">
-    <div class="bg -z-10"></div>
+  <body class="bg-black text-gray-50 overflow-hidden bg">
     <div class="flex flex-col justify-between h-screen p-4 container mx-auto">
       <header
         class="pt-6 flex flex-col items-center gap-6 md:flex-row md:justify-between"
@@ -159,6 +110,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
