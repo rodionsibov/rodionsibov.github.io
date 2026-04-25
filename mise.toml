@@ -1,0 +1,13 @@
+[tasks]
+setup = """
+echo 'eval "$(mise activate bash)"' >> ~/.bashrc \
+&& echo 'eval "$(fzf --bash)"' >> ~/.bashrc \
+&& git clone https://github.com/LazyVim/starter ~/.config/nvim) \
+&& rm -rf ~/.config/nvim/.git
+"""
+
+[tools]
+bun = "latest"
+fzf = "latest"
+neovim = "latest"
+opencode = "latest"
